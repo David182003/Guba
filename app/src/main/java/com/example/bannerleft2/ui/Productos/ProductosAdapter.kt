@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class ProductosAdapter(val list: List<Productos>):
+class ProductosAdapter(var list: List<Productos>):
     RecyclerView.Adapter<ProductosViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductosViewHolder {
@@ -20,5 +20,13 @@ class ProductosAdapter(val list: List<Productos>):
         val favorito = list[position]
         holder.bind(favorito)
     }
+
+    fun updateList(filteredList: List<Productos>) {
+
+        // Update the adapter's internal data with the filtered list
+
+    }
+
+
 
 }
